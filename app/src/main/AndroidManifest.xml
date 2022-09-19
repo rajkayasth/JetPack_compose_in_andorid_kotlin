@@ -13,11 +13,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JetPackComposeExample"
         tools:targetApi="31">
+
+        <activity android:name=".MainActivity" />
         <activity
-            android:name=".MainActivity"
-            android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.JetPackComposeExample">
+            android:name=".imagecard.ImageCardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".textstyle.TextStyleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".states.StateActivity"
+            android:exported="false">
+        </activity>
+        <activity android:name=".textfeilddemo.TextFieldActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

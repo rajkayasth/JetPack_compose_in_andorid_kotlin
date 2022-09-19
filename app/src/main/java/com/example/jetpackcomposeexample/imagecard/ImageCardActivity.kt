@@ -1,4 +1,4 @@
-package com.example.jetpackcomposeexample
+package com.example.jetpackcomposeexample.imagecard
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -20,9 +20,10 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.jetpackcomposeexample.imagecard.ImageCard
+import com.example.jetpackcomposeexample.R
 
-class MainActivity : ComponentActivity() {
+
+class ImageCardActivity : ComponentActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -40,6 +41,42 @@ class MainActivity : ComponentActivity() {
                 )
             }
 
+        }
+    }
+}
+
+@Composable
+fun ImageCard(
+    painter: Painter,
+    contentDescription: String,
+    title: String,
+    modifier: Modifier = Modifier
+) {
+    Card(
+        modifier = modifier.fillMaxWidth(),
+        shape = RoundedCornerShape(15.dp),
+        elevation = 5.dp
+    ) {
+        Box(modifier = Modifier.height(300.dp)) {
+            Image(
+                painter = painter, contentDescription = contentDescription,
+                contentScale = ContentScale.Crop
+            )
+            Box(modifier = Modifier.fillMaxSize().background(brush = Brush.verticalGradient(
+                colors = listOf(
+                    Color.Transparent,
+                    Color.Black
+                ),
+                startY = 300f
+            )))
+            Box(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(12.dp),
+                contentAlignment = Alignment.BottomStart
+            ) {
+                Text(text = title, style = TextStyle(color = Color.White, fontSize = 15.sp))
+            }
         }
     }
 }
