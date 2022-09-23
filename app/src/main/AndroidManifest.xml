@@ -34,13 +34,19 @@
         <activity android:name=".bottomnav.BottomNavigationActivity" />
         <activity android:name=".splah.AnimatedSplashActivity" />
         <activity android:name=".multilazycolumn.MultipleColumnActivity" />
+
         <activity
-            android:name=".permissiondemo.PermissionActivity"
+            android:name=".allscreendemo.ScreenActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".bottomsheet.BottomSheetActivity"
             android:exported="true">
 
         </activity>
+
         <activity
-            android:name=".allscreendemo.ScreenActivity"
+            android:name=".navigationdrwaer.NavDrawerActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
