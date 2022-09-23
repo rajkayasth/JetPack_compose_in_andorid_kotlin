@@ -66,5 +66,12 @@ dependencies {
     debugImplementation "androidx.compose.ui:ui-tooling:$compose_version"
     debugImplementation "androidx.compose.ui:ui-test-manifest:$compose_version"
 
+    //constraint layout
     implementation "androidx.constraintlayout:constraintlayout-compose:1.1.0-alpha03"
+
+    //navigation graph
+    implementation "androidx.navigation:navigation-compose:2.6.0-alpha01"
+
+    //permission in compose
+    implementation "com.google.accompanist:accompanist-permissions:0.25.0"
 }
